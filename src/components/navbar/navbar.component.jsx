@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../../utils/logo/crown.svg";
+import { auth } from "./../../utils/firebase/firebase.utils";
 import "./navbar.styles.scss";
 
-const NavBar = () => {
+const NavBar = ({ userStatus }) => {
   return (
     <div className="navbar">
       <Link className="logo-container" to="/">
@@ -16,9 +17,13 @@ const NavBar = () => {
         <NavLink className="option" to="/contact">
           CONTACT
         </NavLink>
-        <NavLink className="option" to="/signin">
-          SIGNIN
-        </NavLink>
+        {userStatus ? (
+          <div onClick={() => auth.signOut()} className="option">
+            SIGN OUT
+          </div>
+        ) : (
+          <NavLink className="option">SIGN IN</NavLink>
+        )}
       </div>
     </div>
   );
