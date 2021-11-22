@@ -11,13 +11,13 @@ const NavBar = () => {
       </Link>
       <div className="options">
         <NavLink className="option" to="/shop">
-          Shop
+          SHOP
         </NavLink>
         <NavLink className="option" to="/contact">
-          Contact
+          CONTACT
         </NavLink>
         <NavLink className="option" to="/signin">
-          Signin
+          SIGNIN
         </NavLink>
       </div>
     </div>
