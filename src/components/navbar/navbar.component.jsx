@@ -22,7 +22,9 @@ const NavBar = ({ userStatus }) => {
             SIGN OUT
           </div>
         ) : (
-          <NavLink className="option">SIGN IN</NavLink>
+          <NavLink to="/signin" className="option">
+            SIGN IN
+          </NavLink>
         )}
       </div>
     </div>
