@@ -8,7 +8,6 @@ import CartIcon from "./../cart-icon/cart-icon.component";
 import "./navbar.styles.scss";
 
 const NavBar = ({ currentUser, hidden }) => {
-  console.log(hidden);
   return (
     <div className="navbar">
       <Link className="logo-container" to="/">
