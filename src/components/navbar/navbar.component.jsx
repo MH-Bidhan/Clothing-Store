@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { ReactComponent as Logo } from "../../utils/logos/crown.svg";
 import { auth } from "./../../utils/firebase/firebase.utils";
+import { selectCurrentUser } from "./../../utils/redux/user/user-selectors";
 import CartDropdown from "./../cart-dropdown/cart-dropdown.component";
 import CartIcon from "./../cart-icon/cart-icon.component";
 import "./navbar.styles.scss";
@@ -37,7 +38,7 @@ const NavBar = ({ currentUser, hidden }) => {
 };
 
 const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+  currentUser: selectCurrentUser(state),
   hidden: state.cart.hidden,
 });
 
