@@ -1,6 +1,6 @@
-import addItemToCart from "../../functions/add-to-cart";
-import increaseCartItem from "../../functions/increase-cart-Item";
-import decreaseCartItem from "./../../functions/decrease-cart-item";
+import addItemToCart from "./../../functions/cart-functions/add-to-cart";
+import decreaseCartItem from "./../../functions/cart-functions/decrease-cart-item";
+import increaseCartItem from "./../../functions/cart-functions/increase-cart-Item";
 import { cartActionTypes } from "./cart-types";
 
 const INITIAL_STATE = {
