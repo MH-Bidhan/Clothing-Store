@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import CollectionItem from "./../collection-item/collection-item.component";
 import "./collection-preview.styles.scss";
 
-const CollectionPreview = ({ title, routeName, items }) => {
+const CollectionPreview = ({ title, routeName, items, match }) => {
   return (
     <div className="collection-preview">
       <h1 className="title">
-        <Link to={routeName}>{title.toUpperCase()}</Link>
+        <Link to={`shop/${routeName}`}>{title.toUpperCase()}</Link>
       </h1>
       <div className="preview">
         {items
