@@ -6,6 +6,16 @@
   align-items: center;
   margin: 50px auto 0;
 
+  .test-warning {
+    text-align: center;
+    margin: 3rem auto;
+    color: red;
+    font-size: 20px;
+  }
+  .button {
+    margin-bottom: 2rem;
+  }
+
   .checkout-header {
     width: 100%;
     padding: 10px 0;
