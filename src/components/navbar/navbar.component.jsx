@@ -18,9 +18,14 @@ const NavBar = ({ currentUser, hidden }) => {
         <NavLink className="option" to="/shop">
           SHOP
         </NavLink>
-        <NavLink className="option" to="/contact">
+        <a
+          target={"_blank"}
+          className="option"
+          href="http://mahamudhassan.me/"
+          rel="noreferrer"
+        >
           CONTACT
-        </NavLink>
+        </a>
         {currentUser ? (
           <div onClick={() => auth.signOut()} className="option">
             SIGN OUT
