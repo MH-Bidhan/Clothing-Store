@@ -1,7 +1,5 @@
 const filterShopData = (datas, id) => {
-  const filterd = datas.filter((data) => data.routeName === id);
-
-  return filterd[0];
+  return datas[id];
 };
 
 export default filterShopData;

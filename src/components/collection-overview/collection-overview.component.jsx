@@ -4,9 +4,10 @@ import CollectionPreview from "./../collection-preview/collection-preview.compon
 import "./collection-overview.styles.scss";
 
 const CollectionOverview = ({ shopData }) => {
+  const shopDataArray = Object.values(shopData.collections);
   return (
     <div className="collection-overview">
-      {shopData.collections.map(({ id, ...collectionProps }) => (
+      {shopDataArray.map(({ id, ...collectionProps }) => (
         <CollectionPreview key={id} {...collectionProps} />
       ))}
     </div>
