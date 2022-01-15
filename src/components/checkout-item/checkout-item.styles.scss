@@ -41,3 +41,19 @@
     cursor: pointer;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .checkout-item {
+    width: 100%;
+
+    .image-container {
+      width: 100%;
+    }
+
+    .name,
+    .quantity,
+    .price {
+      width: 100%;
+    }
+  }
+}

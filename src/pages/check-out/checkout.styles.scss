@@ -39,3 +39,15 @@
     font-size: 36px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .checkout-page {
+    width: 90%;
+    // padding: 20px;
+    margin: 5px auto;
+
+    .header-block {
+      width: 23%;
+    }
+  }
+}

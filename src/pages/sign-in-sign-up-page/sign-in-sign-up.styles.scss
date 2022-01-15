@@ -3,3 +3,9 @@
   justify-content: space-between;
   padding: 30px;
 }
+
+@media screen and (max-width: 600px) {
+  .signin-signup-page {
+    display: block;
+  }
+}

@@ -18,3 +18,34 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .collection-page {
+    .items {
+      grid-template-columns: repeat(2, 1fr);
+
+      & .collection-item {
+        margin-bottom: 30px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .collection-page {
+    display: flex;
+    flex-direction: column;
+
+    .items {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+
+      & .collection-item {
+        margin-bottom: 30px;
+        width: 80%;
+      }
+    }
+  }
+}

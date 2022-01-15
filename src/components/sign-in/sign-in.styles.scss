@@ -12,3 +12,21 @@
     justify-content: space-between;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .sign-in {
+    width: 100%;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sign-in {
+    .button-group {
+      display: block;
+      .custom-button {
+        margin: 20px 0;
+      }
+    }
+  }
+}

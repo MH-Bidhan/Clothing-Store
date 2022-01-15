@@ -16,3 +16,20 @@
     justify-content: space-between;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .collection-preview {
+    .preview {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .collection-preview {
+    .preview {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}

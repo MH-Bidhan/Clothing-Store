@@ -1,7 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
+import { resetCart } from "../../utils/redux/cart/cart-action";
 
-const StripeCheckoutButton = ({ price }) => {
+const StripeCheckoutButton = ({ price, resetCartItems }) => {
   const publishableKey =
     "pk_test_51KEoOyH3ZRZYgK17tlDO4tgldOyxbXVE6pzC53kACMbrkHEWDOW4pDE1I7Da2c8XIpNbVWvRdVvZXDKjVEEooD7300tbx5xMvq";
 
@@ -11,6 +13,7 @@ const StripeCheckoutButton = ({ price }) => {
 
   const onToken = (token) => {
     console.log(token);
+    resetCartItems();
     alert("Payment Successful");
   };
 
@@ -32,4 +35,8 @@ const StripeCheckoutButton = ({ price }) => {
   );
 };
 
-export default StripeCheckoutButton;
+const mapDispatchToProps = (dispatch) => ({
+  resetCartItems: () => dispatch(resetCart()),
+});
+
+export default connect(null, mapDispatchToProps)(StripeCheckoutButton);

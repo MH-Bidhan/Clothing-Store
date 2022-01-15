@@ -51,3 +51,14 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .collection-item {
+    width: 80%;
+    margin: 20px auto;
+
+    .custom-button {
+      display: unset;
+    }
+  }
+}
